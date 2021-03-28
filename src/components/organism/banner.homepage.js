@@ -9,7 +9,8 @@ position:relative;
 height:100vh;
 .banner{
     display:flex;
-height:calc( 100vh - 54px );
+    height:calc( 100vh - 54px );
+    padding:0 50px;
 }
 .banner-content{
     width:50%;

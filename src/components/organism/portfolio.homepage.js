@@ -11,6 +11,9 @@ position:relative;
 height:100vh;
 background:linear-gradient(107.56deg, #0051FF 0%, #0043D3 100%);
 overflow:hidden;
+.portfolio-section{
+    padding:0 50px;
+}
 .head{
     display:flex;
     justify-content:center;
@@ -61,13 +64,15 @@ const Portfolio = () => {
     return (
         <Div>
             <Layout logoColor={false} menuColor={false}>
-                <div className="head">
-                    <h2>Portfolio</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                </div>
-                <div className="portfolio-tabs">
-                <Tab menu={{ secondary: true, pointing: true }} panes={panes} />
-                </div>
+                <section className="portfolio-section">
+                    <div className="head">
+                        <h2>Portfolio</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    </div>
+                    <div className="portfolio-tabs">
+                    <Tab menu={{ secondary: true, pointing: true }} panes={panes} />
+                    </div>
+                </section>
             </Layout>
         </Div>
     )

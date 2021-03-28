@@ -28,6 +28,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
+    "react-phone-input-2": "^2.13.9",
     "react-slick": "^0.28.1",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-less": "^2.4.1",
