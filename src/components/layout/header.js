@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Menu} from 'semantic-ui-react'
 import logo from "../../assets/images/GD..png"
 import whiteLogo from "../../assets/images/GD. white.png"
+import NavBurger from "./menu"
 const HeaderS = styled.header`
 .ui.secondary.pointing.menu .active.item{
     border-top:2px solid ${({menuColor})=> menuColor?"#0051FF":"#FFFFFF"};
@@ -29,9 +30,8 @@ nav{
     justify-content:space-between;
     align-items:Center;
     padding:0 50px;
-    max-width:1200px;
     margin: 0 auto;
-    height:54px;
+    height:70px;
     z-index:1000;
     .menu{
         margin-top:0;
@@ -39,7 +39,7 @@ nav{
     }
 }
 .dummy{
-    height:54px;
+    height:70px;
 }
 .logo-cont{
     height:50%;
@@ -49,10 +49,26 @@ nav{
         object-fit:contain;
     }
 }
+
+@media screen and (max-width:1280px){
+    .dummy,nav{
+        height:54px;
+    }
+}
+@media screen and (max-width:700px){
+    .sementic-menu{
+        display:none;
+    }
+    nav{
+        padding:0 30px;
+    }
+}
 `;
 
+
+
 const Header = ({logoColor=true,menuColor=true,currentMenu="Intro"}) => {
-    const [activeItem,setActiveItem] = useState(currentMenu)
+
     const handleClick = (name) =>{
         window.location = "/#"+name;
     }
@@ -63,35 +79,36 @@ const Header = ({logoColor=true,menuColor=true,currentMenu="Intro"}) => {
                  <div className="logo-cont">
                      <img src={logoColor?logo:whiteLogo} alt="GD."/>
                  </div>
-                 <Menu pointing secondary >
+                 <Menu pointing secondary className="sementic-menu">
                     <Menu.Item
                         name='Intro'
-                        active={activeItem === 'Intro'}
+                        active={currentMenu === 'Intro'}
                         onClick={(e, { name }) => handleClick(name) }
                         
                     />
                     <Menu.Item
                         name='Portfolio'
-                        active={activeItem === 'Portfolio'}
+                        active={currentMenu === 'Portfolio'}
                         onClick={(e, { name }) => handleClick(name) }
                         
                     />
                     <Menu.Item
                         name='Services'
-                        active={activeItem === 'Services'}
+                        active={currentMenu === 'Services'}
                         onClick={(e, { name }) => handleClick(name) }
                     />
                     <Menu.Item
                         name='About'
-                        active={activeItem === 'About'}
+                        active={currentMenu === 'About'}
                         onClick={(e, { name }) => handleClick(name) }
                     />
                      <Menu.Item
                         name='Contact'
-                        active={activeItem === 'Contact'}
+                        active={currentMenu === 'Contact'}
                         onClick={(e, { name }) => handleClick(name) }
                     />
                 </Menu>
+                <NavBurger menuColor={menuColor} currentMenu={currentMenu}/>
              </nav>
              <div className="dummy"/>
         </HeaderS>

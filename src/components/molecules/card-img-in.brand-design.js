@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 const Div = styled.div`
 height:100%;
-
+padding:20px 20px;
 .sm-container{
     height:100%;
     background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.01) 100%);
@@ -13,7 +13,7 @@ height:100%;
     backdrop-filter: blur(12px);
     border-radius: 30px;
     overflow:hidden;
-    max-width:240px;
+    max-width:350px;
     margin:0  auto;
     border:1px solid #FFFFFF30;
     .img-cont{
@@ -44,8 +44,10 @@ height:100%;
     }
 }
 `
-const CardImgIn = ({img,title,subTitle,action}) => (
-    <Div>
+const CardImgIn = ({img,title,subTitle,action}) => {
+    console.log(action)
+    return(
+        <Div>
         <div className="sm-container">
             <div className="img-cont">
                 <img src={img}  alt={title}/>
@@ -57,6 +59,9 @@ const CardImgIn = ({img,title,subTitle,action}) => (
             </div>
         </div>
     </Div>
-)
+    )
+}
+
+   
 
 export default CardImgIn

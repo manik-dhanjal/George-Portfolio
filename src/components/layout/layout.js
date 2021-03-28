@@ -9,8 +9,10 @@ position: absolute;
 inset: 0px;
 clip: rect(0px, auto, auto, 0px);
 padding:0 50px;
-max-width:1200px;
 margin: 0 auto;
+@media screen and (max-width:700px){
+    padding:0 30px;
+}
 `
 
 const Layout = ({children,logoColor,menuColor,currentMenu}) => {

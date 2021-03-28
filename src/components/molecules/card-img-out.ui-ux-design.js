@@ -2,6 +2,7 @@ import React from 'react'
 import styled from "styled-components";
 import Button from "../atom/button"
 const Div = styled.div`
+padding:0 20px;
 .sm-container{
     background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.01) 100%);
     mix-blend-mode: normal;
@@ -10,7 +11,7 @@ const Div = styled.div`
     border: 1px solid #FFFFFF30;
     padding:20px;
 
-    max-width:250px;
+    max-width:350px;
     margin:0 auto;
     margin-top:50px;
     .img-cont{
@@ -42,7 +43,7 @@ const Div = styled.div`
 }
 `
 
-const CardImgOut = ({img,title,link,desc}) => {
+const CardImgOut = ({img,title,link,desc,action}) => {
     return (
         <Div>
             <div className="sm-container">
@@ -52,7 +53,7 @@ const CardImgOut = ({img,title,link,desc}) => {
                 <div className='content'>
                     <h3>{title}</h3>
                     <p>{desc}</p>
-                    <Button action={()=>console.log("clicked")} >Explore Case Study</Button>
+                    <Button action={action} >Explore Case Study</Button>
                     <Button href={link} type='transparent'>Live Site</Button>
                 </div>
                 

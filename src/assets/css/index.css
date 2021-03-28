@@ -12,11 +12,47 @@ h1,h2,h3,h4,h5,h6{
     font-family: Playfair Display;
 }
 h1{
-    font-size: 3em;
+    font-size: 5em;
 }
 h2{
-    font-size: 2.5em;
+    font-size: 4em;
 }
 h3{
-    font-size: 1.5em;
+    font-size: 2.5em;
+}
+p{
+    font-size:18px;
+}
+@media screen and (max-width:1440px){
+    h1{
+        font-size: 4em;
+    }
+    h2{
+        font-size: 3em;
+    }
+    h3{
+        font-size: 2em;
+    }
+    p{
+        font-size:16px;
+    }
+}
+@media screen and (max-width:1280px){
+    h1{
+        font-size: 3em;
+    }
+    h2{
+        font-size: 2.5em;
+    }
+    h3{
+        font-size: 1.5em;
+    }
+    p{
+        font-size:14px;
+    }
+}
+@media screen and (max-width:700px){
+body{
+    font-size: 12px;
+}
 }

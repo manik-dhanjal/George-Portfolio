@@ -8,19 +8,27 @@ button,a{
     background:${({type})=>type==="transparent"?"transparent":"#FFFFFF"};
     border:1px solid white;
     border-radius:8px;
-    padding:8px 10px;
+    padding:12px 20px;
     max-width:180px;
     width:100%;
     display:block;
-    margin:5px auto;
+    margin:10px auto;
     font-family:Poppins;
     cursor:pointer;
     transition:0.3s ease;
-    font-size:14px;
+    font-size:0.9em;
+    line-height:1.2em;
 }
 button:hover,a:hover{
     color:${({type})=>type!=="transparent"?"#FFFFFF":"#0051FF"};
     background:${({type})=>type!=="transparent"?"transparent":"#FFFFFF"};
+}
+@media screen and (max-width:1440px){
+    button,a{
+        font-size:0.9em;
+        padding:8px 10px;
+        margin:5px auto;
+    }
 }
 `
 
