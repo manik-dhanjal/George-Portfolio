@@ -62,8 +62,8 @@ const Portfolio = () => {
       ]
       
     return (
-        <Div>
-            <Layout logoColor={false} menuColor={false}>
+        <Div id="Portfolio">
+            <Layout logoColor={false} menuColor={false} currentMenu="Portfolio">
                 <section className="portfolio-section">
                     <div className="head">
                         <h2>Portfolio</h2>

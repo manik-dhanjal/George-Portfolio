@@ -42,8 +42,8 @@ height:100vh;
 
 const Banner = () => {
     return (
-        <Div>
-            <Layout>
+        <Div id="Intro">
+            <Layout currentMenu="Intro">
                 <div className="banner">
                     <div className="banner-content">
                         <h1>Will Make the Digital Beautiful.</h1>

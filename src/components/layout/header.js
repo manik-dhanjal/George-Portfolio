@@ -5,12 +5,18 @@ import logo from "../../assets/images/GD..png"
 import whiteLogo from "../../assets/images/GD. white.png"
 const HeaderS = styled.header`
 .ui.secondary.pointing.menu .active.item{
+    border-top:2px solid ${({menuColor})=> menuColor?"#0051FF":"#FFFFFF"};
     border-bottom:none;
-    border-top:2px solid black;
+    color:${({menuColor})=> menuColor?"#0051FF":"#FFFFFF"}!important;
+    position:relative;
 }
 .ui.secondary.pointing.menu .item {
     padding-top:20px;
     padding-bottom:20px;
+    border-bottom:none!important;
+    transition:0.3s ease;
+    font-size:1.1em;
+    color:${({menuColor})=> menuColor?"black":"#FFFFFF"};
 }
 
 nav{
@@ -26,6 +32,7 @@ nav{
     max-width:1200px;
     margin: 0 auto;
     height:54px;
+    z-index:1000;
     .menu{
         margin-top:0;
         border-bottom:none!important;
@@ -44,9 +51,11 @@ nav{
 }
 `;
 
-const Header = ({logoColor=true,menuColor=true}) => {
-    const [activeItem,setActiveItem] = useState("home")
-
+const Header = ({logoColor=true,menuColor=true,currentMenu="Intro"}) => {
+    const [activeItem,setActiveItem] = useState(currentMenu)
+    const handleClick = (name) =>{
+        window.location = "/#"+name;
+    }
     return (
         <HeaderS menuColor={menuColor}>
 
@@ -56,21 +65,31 @@ const Header = ({logoColor=true,menuColor=true}) => {
                  </div>
                  <Menu pointing secondary >
                     <Menu.Item
-                        name='home'
-                        active={activeItem === 'home'}
-                        onClick={(e, { name }) => setActiveItem( name ) }
+                        name='Intro'
+                        active={activeItem === 'Intro'}
+                        onClick={(e, { name }) => handleClick(name) }
                         
                     />
                     <Menu.Item
-                        name='messages'
-                        active={activeItem === 'messages'}
-                        onClick={(e, { name }) => setActiveItem( name ) }
+                        name='Portfolio'
+                        active={activeItem === 'Portfolio'}
+                        onClick={(e, { name }) => handleClick(name) }
                         
                     />
                     <Menu.Item
-                        name='friends'
-                        active={activeItem === 'friends'}
-                        onClick={(e, { name }) => setActiveItem( name ) }
+                        name='Services'
+                        active={activeItem === 'Services'}
+                        onClick={(e, { name }) => handleClick(name) }
+                    />
+                    <Menu.Item
+                        name='About'
+                        active={activeItem === 'About'}
+                        onClick={(e, { name }) => handleClick(name) }
+                    />
+                     <Menu.Item
+                        name='Contact'
+                        active={activeItem === 'Contact'}
+                        onClick={(e, { name }) => handleClick(name) }
                     />
                 </Menu>
              </nav>

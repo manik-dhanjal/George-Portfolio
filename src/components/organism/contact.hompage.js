@@ -66,8 +66,8 @@ background:linear-gradient(
 `
 const Contact = () => {
     return (
-        <Div>
-            <Layout logoColor={false}>
+        <Div id="Contact">
+            <Layout logoColor={false} currentMenu="Contact">
                 <section className="contact-section">
                     <div className="address">
                         <h2>Address</h2>

@@ -13,10 +13,10 @@ max-width:1200px;
 margin: 0 auto;
 `
 
-const Layout = ({children,logoColor,menuColor}) => {
+const Layout = ({children,logoColor,menuColor,currentMenu}) => {
     return (
         <Div>
-            <Header logoColor={logoColor} menuColor={menuColor}/>
+            <Header logoColor={logoColor} menuColor={menuColor} currentMenu={currentMenu}/>
             <main>
                  {children}
             </main>

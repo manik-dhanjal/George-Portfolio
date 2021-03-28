@@ -65,8 +65,8 @@ main{
 
 const About = () => {
     return (
-        <Div>
-            <Layout>
+        <Div id="About">
+            <Layout currentMenu="About">
                 <div className='about-section'>
                     <div className='george-img'>
                         <div className='img-cont'>
