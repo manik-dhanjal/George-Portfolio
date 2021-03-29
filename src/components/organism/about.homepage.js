@@ -15,6 +15,9 @@ main{
     padding:30px 50px;
     display:flex;
     height: 100%;
+    max-width:1600px;
+    width:100%;
+    margin:0 auto;
     &>div{
         width:50%;
     }
@@ -33,9 +36,51 @@ main{
     }
     .content{
         padding-left:30px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        h2,h3{
+            color:#0051FF;
+        }
+        h3{
+            margin-top:30px;
+            margin-bottom:15px;
+            font-family:poppins!important;
+        }
+        p{
+            font-size:18px;
+            margin-bottom:5px;
+        }
+        .worked-in{
+            .companies{
+                display:flex;
+                &>div{
+                    width:150px;
+                }
+            }
+        }
+        .worked-for{
+            margin-top:20px;
+        }
+    }
+}
+@media screen and (max-width:1440px){
+    .about-section  .content{
+        padding-left:30px;
+        h2,h3{
+            color:#0051FF;
+        }
+        h3{
+            margin-top:15px;
+            margin-bottom:5px;
+            font-family:poppins!important;
+        }
+        p{
+            font-size:1em;
+            margin-bottom:3px;
+        }
+    }    
+}
+@media screen and (max-width:1280px){
+    .about-section  .content{
+        padding-left:30px;
         h2,h3{
             color:#0051FF;
         }
@@ -48,16 +93,34 @@ main{
             font-size:0.85em;
             margin-bottom:3px;
         }
-        .worked-in{
-            .companies{
-                display:flex;
-                &>div{
-                    width:150px;
-                }
-            }
+    }    
+}
+@media screen and (max-width:1024px){
+    .about-section{
+        flex-direction:column;
+        padding:30px 0;
+        &>div{
+            width:100%;
         }
-        .worked-for{
-            margin-top:20px;
+        .george-img{
+            height:45%;
+            padding:0px;
+        }
+        .content{
+            height:55%;
+            padding:0px;
+            padding-top:30px;
+        }
+    }
+}
+@media screen and (max-width:700px){
+    .about-section{
+        .george-img{
+            height:30%;
+        }
+        .content{
+            height:70%;
+            padding-top:20px;
         }
     }
 }

@@ -11,7 +11,7 @@ padding:0 20px;
     border: 1px solid #FFFFFF30;
     padding:20px;
 
-    max-width:350px;
+    max-width:375px;
     margin:0 auto;
     margin-top:50px;
     .img-cont{

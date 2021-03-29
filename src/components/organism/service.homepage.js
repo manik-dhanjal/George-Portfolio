@@ -1,11 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
 import Layout from '../layout/layout'
-import CardImgIn from "../molecules/card-img-in.service"
-import service1 from "../../assets/images/service1.svg"
-import service2 from "../../assets/images/service2.svg"
-import service3 from "../../assets/images/service3.svg"
-
+import ServiceSlider from "../molecules/service-slider.service"
 const Div = styled.div`
 scroll-snap-align:start;
 position:relative;
@@ -13,23 +9,47 @@ height:100vh;
 overflow:hidden;
 .service-section{
     padding:0 50px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;  
 }
 .head{
+    margin-bottom:30px;
     h2{
         color:#0051FF;
         text-align:Center;
     }
     p{
         text-align:center;
-        max-width:800px;
+        max-width:900px;
         margin:0 auto;
-        font-size:0.85em;
+        font-size:18px;
     }
 }
 .cards-container{
     margin-top:40px;
     display:flex;
-    justify-content:space-between;
+    justify-content:center;
+}
+@media screen and (max-width:1440px){
+    .head{
+
+        h2{
+            color:#0051FF;
+            text-align:Center;
+        }
+        p{
+            text-align:center;
+            max-width:800px;
+            margin:0 auto;
+            font-size:0.85em;
+        }
+    }
+}
+@media screen and (max-width:700px){
+    .service-section{
+        padding:0px;
+    }
 }
 `
 const Service = () => {
@@ -41,11 +61,7 @@ const Service = () => {
                         <h2>Services</h2>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
                     </div>
-                    <div className='cards-container'>
-                        {cardData.map((data,i)=>(
-                            <CardImgIn {...data} key={i+"service"}/>
-                        ))}
-                    </div>
+                    <ServiceSlider/>
                 </div> 
             </Layout>
         </Div>
@@ -53,19 +69,3 @@ const Service = () => {
 }
 
 export default Service
-
-const cardData = [
-        {
-            title:"UI/UX Design",
-            desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-            img:service1
-        },{
-            title:"Branding Design",
-            desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-            img:service2
-        },{
-            title:"Illustration",
-            desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-            img:service3
-        }
-]

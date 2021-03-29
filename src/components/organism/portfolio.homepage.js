@@ -14,6 +14,8 @@ background:linear-gradient(107.56deg, #0051FF 0%, #0043D3 100%);
 overflow:hidden;
 .portfolio-section{
     padding:0 50px;
+    display:flex;
+    flex-direction:column;
 }
 main,.portfolio-section{
     height:calc( 100vh - 70px );
@@ -24,7 +26,7 @@ main,.portfolio-section{
     justify-content:center;
     align-items:center;
     flex-direction:column;
-    margin-bottom:30px;
+    padding-bottom:30px;
     h2{
         color:white;
     }
@@ -51,13 +53,22 @@ main,.portfolio-section{
         color:white!important;
     }
 }
+.portfolio-tabs {
+    flex-grow:1;
+&>div{
+    display:flex;
+    flex-direction:column;
+    height:100%;
+}
+}
 @media screen and (max-width:1440px){
     main,.portfolio-section{
         height:calc( 100vh - 54px );
     }
     .head{
-        padding-top:10px;
+        padding-top:0px;
         margin-bottom:0px;
+        padding-bottom:0px;
     }
     .portfolio-tabs .menu{
         padding-top:15px;
@@ -73,7 +84,6 @@ main,.portfolio-section{
         margin-bottom:0px;
     }
     .portfolio-tabs .menu{
-        padding-top:20px;
         a{
             color:white;
             font-size:1em;
@@ -86,7 +96,7 @@ main,.portfolio-section{
     }
     .head{
         padding-top:0px;
-        margin-bottom:20px;
+        padding-bottom:20px;
         max-width:100%;
         h2{
             color:white;
