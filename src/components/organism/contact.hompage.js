@@ -1,7 +1,8 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import styled from "styled-components"
 import Layout from '../layout/layout'
 import ContactForm from '../molecules/contact-form.contact'
+import useWindowDimensions from "../../hooks/window-size"
 const Div = styled.div`
 scroll-snap-align:start;
 position:relative;
@@ -122,10 +123,12 @@ background:linear-gradient(
       }
 }
 `
+
 const Contact = () => {
+
     return (
         <Div id="Contact">
-            <Layout logoColor={window.innerWidth<=1024} currentMenu="Contact" >
+            <Layout logoColor={useWindowDimensions().width<=1024} currentMenu="Contact" >
                 <section className="contact-section">
                     <div className="address">
                         <h2>Address</h2>
