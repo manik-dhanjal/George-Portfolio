@@ -13,14 +13,15 @@ const Div = styled.div`
         width:50%;
     }
 }
+width:100%;
 .react-tel-input{
     margin:10px;
 }
 .react-tel-input .form-control {
   border: 1px solid #C4C4C4!important;
-  height:42px!important;
+  height:52px!important;
   width: 100%!important;
-  font-size: 0.9em!important;
+  font-size: 18px!important;
   border-radius:0!important;
 }
 
@@ -34,16 +35,16 @@ const Div = styled.div`
     border: 1px solid #C4C4C4!important;
     border-right: none!important;
     border-radius:0!important;
-    height:42px;
+    height:100%;
     }
 .submit-btn{
     border:1px solid #C4C4C4;
     color:#0051FF;
-    padding:10px 15px;
-    font-size:1.2em;
+    padding:15px 25px;
+    font-size:1.5em;
     background:white;
     text-align:center;
-    max-width:150px;
+    max-width:200px;
     width:100%;
     cursor:pointer;
     transition:0.3s ease;
@@ -54,6 +55,19 @@ const Div = styled.div`
         background:#0051FF;
         border-color:#0051FF;
     }
+}
+@media screen and (max-width:1440px){
+.submit-btn{
+    padding:10px 15px;
+    font-size:1.2em;
+    max-width:150px;
+}
+.react-tel-input .form-control {
+    border: 1px solid #C4C4C4!important;
+    height:42px!important;
+    width: 100%!important;
+    font-size: 0.9em!important;
+}
 }
 `
 

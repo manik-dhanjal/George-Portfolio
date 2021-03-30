@@ -43,7 +43,7 @@ button:hover{
 `
 const ToogleBtn = ({next,prev,color="white"}) => {
     return (
-        <Div color={color}>
+        <Div color={color} className="toogle-btns">
                 <button className="button" onClick={prev}>
                     <img src={color=="blue"?prevArrB:prevArr} alt="Previous Arrow"/>
                 </button>

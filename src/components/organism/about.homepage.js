@@ -23,7 +23,7 @@ main{
     }
     .george-img{
         height: 100%;
-        padding-right:30px;
+        padding-right:50px;
         .img-cont{
             overflow:hidden;
             height: 100%;
@@ -35,7 +35,7 @@ main{
         }
     }
     .content{
-        padding-left:30px;
+        padding-left:50px;
         h2,h3{
             color:#0051FF;
         }
@@ -62,21 +62,26 @@ main{
     }
 }
 @media screen and (max-width:1440px){
-    .about-section  .content{
-        padding-left:30px;
-        h2,h3{
-            color:#0051FF;
+    .about-section  {
+        .george-img{
+            padding-right:30px;
         }
-        h3{
-            margin-top:15px;
-            margin-bottom:5px;
-            font-family:poppins!important;
-        }
-        p{
-            font-size:1em;
-            margin-bottom:3px;
-        }
-    }    
+        .content{
+            padding-left:30px;
+            h2,h3{
+                color:#0051FF;
+            }
+            h3{
+                margin-top:15px;
+                margin-bottom:5px;
+                font-family:poppins!important;
+            }
+            p{
+                font-size:1em;
+                margin-bottom:3px;
+            }
+        }    
+    }
 }
 @media screen and (max-width:1280px){
     .about-section  .content{

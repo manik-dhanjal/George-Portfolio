@@ -55,6 +55,15 @@ nav{
         height:54px;
     }
 }
+@media screen and (max-wdith:1024px){
+    .ui.secondary.pointing.menu .active.item{
+        border-top:2px solid ${({sm})=> !sm?"#0051FF":"#FFFFFF"};
+        color:${({sm})=> !sm?"#0051FF":"#FFFFFF"}!important;
+    }
+    .ui.secondary.pointing.menu .item {
+        color:${({sm})=> !sm?"black":"#FFFFFF"};
+    }
+}
 @media screen and (max-width:700px){
     .sementic-menu{
         display:none;
@@ -67,13 +76,13 @@ nav{
 
 
 
-const Header = ({logoColor=true,menuColor=true,currentMenu="Intro"}) => {
+const Header = ({logoColor=true,menuColor=true,currentMenu="Intro",sm=false}) => {
 
     const handleClick = (name) =>{
         window.location = "/#"+name;
     }
     return (
-        <HeaderS menuColor={menuColor}>
+        <HeaderS menuColor={menuColor} sm={sm}>
 
              <nav>
                  <div className="logo-cont">

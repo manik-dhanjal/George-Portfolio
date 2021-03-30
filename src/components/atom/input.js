@@ -4,17 +4,31 @@ import styled from "styled-components"
 const Div = styled.div`
 margin:10px ;
 input{
-    padding:13px 15px;
-    font-size:0.9em;
+    font-size:18px;
+    padding:15px 20px;
     width:100%;
     border:1px solid #C4C4C4;
 }
 textarea{
     width:100%;
-    height:100px;
-    padding:13px 15px;
-    font-size:0.9em;
+    height:250px;
+    font-size:18px;
+    padding:15px 20px;
     border:1px solid #C4C4C4;
+}
+@media screen and (max-width:1440px){
+input,textarea{
+    font-size:0.9em;
+    padding:13px 15px;
+}
+textarea{
+    height:150px;
+}
+}
+@media screen and (max-width:1440px){
+    textarea{
+        height:75px;
+    }
 }
 `
 const Input = (props) => {

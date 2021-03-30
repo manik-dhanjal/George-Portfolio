@@ -21,8 +21,10 @@ flex-direction:column;
     max-width:1000px;
     margin:0px auto;
 }
-@media screen and (max-width:1024px){
-
+@media screen and (min-width:1080px){
+  .toogle-btns{
+      display:none;
+  }
 }
 `
 const ServiceSlider = () => {

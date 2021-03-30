@@ -23,10 +23,10 @@ main{
 }
 `
 
-const Layout = ({children,logoColor,menuColor,currentMenu}) => {
+const Layout = ({children,logoColor,menuColor,currentMenu,sm}) => {
     return (
         <Div>
-            <Header logoColor={logoColor} menuColor={menuColor} currentMenu={currentMenu}/>
+            <Header logoColor={logoColor} menuColor={menuColor} currentMenu={currentMenu} sm={sm}/>
             <main>
                  {children}
             </main>
