@@ -128,7 +128,7 @@ const Contact = () => {
 
     return (
         <Div id="Contact">
-            <Layout logoColor={useWindowDimensions().width<=1024} currentMenu="Contact" >
+            <Layout logoColor={useWindowDimensions()<=1024} currentMenu="Contact" >
                 <section className="contact-section">
                     <div className="address">
                         <h2>Address</h2>
