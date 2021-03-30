@@ -25,8 +25,8 @@ button:hover,a:hover{
 }
 @media screen and (max-width:1440px){
     button,a{
-        font-size:0.9em;
-        padding:8px 10px;
+        font-size:0.8em;
+        padding:12px 10px;
         margin:5px auto;
     }
 }
