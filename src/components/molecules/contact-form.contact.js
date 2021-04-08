@@ -100,7 +100,7 @@ const ContactForm = () => {
             "form-name": event.target.getAttribute("name"),
             ...contactData
           })
-        }).then(() => navigate("/thank-you/")).catch(error => alert(error))
+        }).then(() => alert("Form Successfully Submitted")).catch(error => alert(error))
       }
     return (
         <Div>
