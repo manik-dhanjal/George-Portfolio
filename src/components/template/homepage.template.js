@@ -17,13 +17,13 @@ const Homepage = () => {
         <Layout>
                     <Helmet>
                         <meta charSet="utf-8" />
-                        <title>George's Design</title>
-                        <link rel="canonical" href="http://mysite.com/example" />
+                        <title>GD.</title>
+                        <link rel="canonical" href="georgedesigns.in" />
                         <link rel="shortcut icon" href={fav} type="image/x-icon" />
-                        <meta property="og:title" content="George's Design"/>
-                        <meta property="og:description" content="This is a portfolio of Greorge"/>
+                        <meta property="og:title" content="GD."/>
+                        <meta property="og:description" content="Will Make the Digital Beautiful."/>
                         <meta property="og:image" content={logo}/>
-                        <meta property="og:url" content="https://george-design.netlify.app/"/>
+                        <meta property="og:url" content="https://georgedesigns.in"/>
                     </Helmet>
              <Banner/>
              <Portfolio/>
