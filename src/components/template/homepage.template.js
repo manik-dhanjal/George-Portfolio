@@ -22,7 +22,7 @@ const Homepage = () => {
                         <link rel="shortcut icon" href={fav} type="image/x-icon" />
                         <meta property="og:title" content="GD."/>
                         <meta property="og:description" content="Will Make the Digital Beautiful."/>
-                        <meta property="og:image" content={logo}/>
+                        <meta property="og:image" content={"/GD..png"}/>
                         <meta property="og:url" content="https://georgedesigns.in"/>
                     </Helmet>
              <Banner/>
