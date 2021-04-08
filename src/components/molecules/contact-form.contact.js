@@ -86,12 +86,12 @@ const ContactForm = () => {
         if(!e.target)  setContactData({...contactData,phone:e})
         else setContactData({...contactData,[e.target.name]:e.target.value})
     }
-    handleSubmit = e => {
+    const handleSubmit = e => {
         e.preventDefault();
         fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: encode({ "form-name": "contact", ...contactData })
+          body: { "form-name": "contact", ...contactData }
         })
           .then(() => alert("Success!"))
           .catch(error => alert(error));
