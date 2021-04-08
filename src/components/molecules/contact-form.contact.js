@@ -86,20 +86,26 @@ const ContactForm = () => {
         if(!e.target)  setContactData({...contactData,phone:e})
         else setContactData({...contactData,[e.target.name]:e.target.value})
     }
-    const handleSubmit = e => {
-        e.preventDefault();
+    function encode(data) {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+            .join("&")
+      }
+      const handleSubmit = (event) => {
+        event.preventDefault()
         fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: { "form-name": "contact", ...contactData }
-        })
-          .then(() => alert("Success!"))
-          .catch(error => alert(error));
-
-      };
+          body: encode({
+            "form-name": event.target.getAttribute("name"),
+            ...contactData
+          })
+        }).then(() => navigate("/thank-you/")).catch(error => alert(error))
+      }
     return (
         <Div>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} data-netlify="true" name="ContactUs">
+                <input type="hidden" name="form-name" value="ContactUs" />
                 <div className="inline-boxes">
                 <Input placeholder="First Name" value={contactData.firstName} name="firstName" type="text" onChange={handleChange}/>
                 <Input placeholder="Last Name" value={contactData.lastName} name="lastName" onChange={handleChange}/>
