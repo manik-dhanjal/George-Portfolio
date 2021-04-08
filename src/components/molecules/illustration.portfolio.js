@@ -1,28 +1,25 @@
 import React,{useRef,useEffect} from 'react'
 import styled from "styled-components"
 import Slider from "react-slick";
-import illustration1 from "../../assets/images/1.illustration.png"
-import illustration2 from "../../assets/images/2.illustration.png"
-import illustration3 from "../../assets/images/3.illustration.png"
-import ToogleBtn from '../atom/toogle-btn';
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
+import ImageSupplier from "../atom/image-supplier"
 
+import ToogleBtn from '../atom/toogle-btn';
 const Div = styled.div`
-flex-grow:1;
-display:flex;
-justify-content:center;
-flex-direction:column;
+
 max-width:1400px;
 padding-bottom:30px;
+padding-top:40px;
 width:100%;
 margin:0px auto!important;
-margin-top:-20px!important;
 .slick-track {
     display: flex!important;
     }
     margin:20px;
 .illustration-img-cont{
     height:40vh;
-    padding:0 10px;
+    padding:0 5px;
 
     img{
         width:100%;
@@ -30,7 +27,19 @@ margin-top:-20px!important;
         object-fit:contain;
     }
 }
-
+.illustration-img-cont{
+    height:40vh;
+}
+@media screen and (max-width:1440px){
+    max-width:900px;
+    margin:0px auto;
+    padding-top:20px;
+}
+@media screen and (max-width:1024px){
+  .toogle-btns{
+    margin-top:20px;
+  }
+}
 @media screen and (max-width:1080px){
     .illustration-img-cont{
         height:40vh;
@@ -41,7 +50,10 @@ margin-top:-20px!important;
 }
 
 `
-const Illustration = () => {
+
+const Illustration = (props) => {
+    const imgs = ImageSupplier();
+    console.log(props)
     const slider = useRef(null)
     const settings = {
         className: "slider variable-width",
@@ -73,51 +85,21 @@ const Illustration = () => {
             }
           ]
       };
-      console.log(slider)
+      console.log(imgs,"dd")
 
     return (
         <Div>
            <Slider {...settings} ref={slider}>
-                {sliderData.map((data)=>(
-                    <div className='illustration-img-cont'>
-                        <img {...data} />
-                    </div>
-                ))}
-            </Slider>
+                {imgs?imgs.map((i)=>(
+                     <div className='illustration-img-cont'>
+                        <Img fixed={i.node.childImageSharp.fixed}/>
+                    </div> 
+                )):null}
+            </Slider> 
             <ToogleBtn next={()=>slider.current.slickNext()} prev={()=>slider.current.slickPrev()}/>
         </Div>
     )
 }
-
 export default Illustration
 
-const sliderData = [
-    {
-        alt:"illustration1",
-        src:illustration1
-    },
-    {
-        alt:"illustration2",
-        src:illustration2
-    },
-    {
-        alt:"illustration3",
-        src:illustration3
-    },
-    {
-        alt:"illustration2",
-        src:illustration2
-    },
-    {
-        alt:"illustration3",
-        src:illustration3
-    },
-    {
-        alt:"illustration1",
-        src:illustration1
-    },
-    {
-        alt:"illustration2",
-        src:illustration2
-    },
-]
+

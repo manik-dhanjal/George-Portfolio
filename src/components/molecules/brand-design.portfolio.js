@@ -13,6 +13,7 @@ max-width:1400px;
 width:100%;
 margin:0px auto;
 padding-bottom:30px;
+padding-top:50px;
 flex-grow:1;
 display:flex;
 justify-content:center;
@@ -20,8 +21,14 @@ flex-direction:column;
 @media screen and (max-width:1440px){
     max-width:900px;
     margin:0px auto;
+    padding-top:20px;
 }
-
+@media screen and (max-width:1280px){
+    padding-top:20px;
+}
+@media screen and (max-width:1024px){
+    padding-top:30px;
+}
 `
 const BrandDesign = () => {
     const slider = useRef(null)
@@ -37,7 +44,6 @@ const BrandDesign = () => {
               settings: {
                 slidesToShow: 2,
                 slidesToScroll: 2,
-                rows: 2,
                 centerPadding: "60px"
               }
             },

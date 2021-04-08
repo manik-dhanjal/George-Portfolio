@@ -18,5 +18,12 @@ module.exports = {
       },
       __key: "images",
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/assets/images/illustrations`,
+        name: "imageFolder",
+      },
+    },
   ],
 };

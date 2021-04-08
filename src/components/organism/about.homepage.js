@@ -1,29 +1,22 @@
 import React from 'react'
 import styled from "styled-components"
 import Layout from '../layout/layout'
-import george from "../../assets/images/george-img.png"
-const Div = styled.div`
-scroll-snap-align:start;
-position:relative;
-height:100vh;
-overflow:hidden;
+import george from "../../assets/images/profile photo.png"
 
-main{
-    height: calc( 100vh - 54px );
-}
+const Div = styled.div`
 .about-section{
-    padding:30px 50px;
+    padding:30px 130px;
     display:flex;
-    height: 100%;
-    max-width:1600px;
+    justify-content:center;
+    align-items:center;
+    min-height: calc( 100vh - 54px );
     width:100%;
     margin:0 auto;
-    &>div{
-        width:50%;
-    }
+    margin-bottom:20px;
     .george-img{
         height: 100%;
-        padding-right:50px;
+        width:40%;
+        padding-right:30px;
         .img-cont{
             overflow:hidden;
             height: 100%;
@@ -36,30 +29,55 @@ main{
     }
     .content{
         padding-left:50px;
-        h2,h3{
-            color:#0051FF;
+        width:60%;
+        flex:1;
+        .content-about,.worked-in,.worked-for{
+            display:flex;
+            margin-bottom:40px;
+            h2,h3{
+                margin:0;
+                margin-right:30px;
+                min-width:180px;
+            }
         }
-        h3{
-            margin-top:30px;
-            margin-bottom:15px;
-            font-family:poppins!important;
+        h2,h3,h4{
+            color:#0051FF;
         }
         p{
             font-size:18px;
             margin-bottom:5px;
         }
-        .worked-in{
+        .worked{
+            padding-bottom:10px;
+            h4{
+                padding-bottom:3px;
+                font-size:18px;
+                margin:0;
+                font-family:poppins;
+            }
+        }
+        .worked-in,.worked-for{
             .companies{
                 display:flex;
-                &>div{
-                    width:150px;
+                flex:1;
+                .left{
+                    padding-right:10px;
+                    width:50%;
+                    margin:0;
                 }
+                .right{
+                    width:50%;
+                    padding-left:10px;
+                    margin:0;
+                }
+                
             }
         }
         .worked-for{
             margin-top:20px;
         }
     }
+
 }
 @media screen and (max-width:1440px){
     .about-section  {
@@ -67,52 +85,71 @@ main{
             padding-right:30px;
         }
         .content{
+            .content-about,.worked-in,.worked-for{
+                display:flex;
+                margin-bottom:20px;
+                h2,h3{
+                    margin:0;
+                    margin-right:30px;
+                    min-width:150px;
+                }
+            }
+            .worked{
+                padding-bottom:10px;
+                h4{
+                    padding-bottom:3px;
+                    font-size:13px;
+                    margin:0;
+                    font-family:poppins;
+                }
+            }
+            .worked-in,.worked-for{
+                .companies{
+                    .left{
+                        width:50%;
+                    }
+                    
+                }
+            }
             padding-left:30px;
             h2,h3{
                 color:#0051FF;
             }
-            h3{
-                margin-top:15px;
-                margin-bottom:5px;
-                font-family:poppins!important;
-            }
             p{
-                font-size:1em;
+                font-size:14px;
                 margin-bottom:3px;
             }
         }    
     }
 }
 @media screen and (max-width:1280px){
-    .about-section  .content{
-        padding-left:30px;
-        h2,h3{
-            color:#0051FF;
-        }
-        h3{
-            margin-top:15px;
-            margin-bottom:5px;
-            font-family:poppins!important;
-        }
-        p{
-            font-size:0.85em;
-            margin-bottom:3px;
+    .about-section {
+        .content{
+            padding-left:30px;
+            .content-about,.worked-in,.worked-for{
+                h2,h3{
+                    margin-right:30px;
+                    min-width:100px;
+                }
+            }
+            h2,h3{
+                color:#0051FF;
+            }
+            p{
+                font-size:11px!important;
+                margin-bottom:3px;
+            }
         }
     }    
 }
 @media screen and (max-width:1024px){
     .about-section{
-        flex-direction:column;
-        padding:30px 0;
+        padding:30px 50px;
+        min-height:auto;
         &>div{
             width:100%;
         }
-        .george-img{
-            height:45%;
-            padding:0px;
-        }
         .content{
-            height:55%;
             padding:0px;
             padding-top:30px;
         }
@@ -120,12 +157,25 @@ main{
 }
 @media screen and (max-width:700px){
     .about-section{
+        flex-direction:column;
+        padding:30px;
         .george-img{
-            height:30%;
+            width:100%;
+            padding:0;
         }
         .content{
-            height:70%;
+            width:100%;
+            padding:0px;
             padding-top:20px;
+            .content-about,.worked-in,.worked-for{
+                flex-direction:column;
+                h2,h3{
+                    margin-bottom:15px;
+                }
+                h3{
+                    font-size:18px;
+                }
+            }
         }
     }
 }
@@ -133,45 +183,80 @@ main{
 
 const About = () => {
     return (
-        <Div id="About">
-            <Layout currentMenu="About">
-                <div className='about-section'>
+        <Div >
+            {/* <Layout currentMenu="About"> */}
+                <div className='about-section'id="about">
                     <div className='george-img'>
                         <div className='img-cont'>
                             <img src={george} alt="george"/>
                         </div>
                     </div>
                     <div className = "content">
-                        <h2>About</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+                        <div className="content-about">
+                            <h2>About</h2>
+                            <p className="right-content">
+                                I am a self-taught Graphic & UX/UI designer with 3+ years of experience in the creative industry. I have treaded across different technologies of the past and the present. My curiosity feeds my passion and puts them to use by various creative problems solving. I am open to exploring new possibilities and honing my skills to enhance my workflow in the field of user interface and user experience design I have a keen passion for front-end development as it adds fuel to my career for a long time investment. Languages such as HTML, CSS, SASS/SCSS, Bootstrap are well-known languages.
+                                <br/><br/>
+                                I am in the process of gaining knowledge of Javascript, JS, Jquery, GSAP as well as learning React
+                            </p>
+                        </div>
                         <div className="worked-in">
-                            <h3>Companies worked for as a freelancer</h3>
+                            <h3>Building</h3>
                             <div className="companies">
                                 <div className='left'>
-                                    <p>Netart</p>
-                                    <p>Growladders</p>
-                                    <p>Chaayos</p>
-                                    <p>Sync</p>
+                                    <div className="worked">
+                                        <h4>Freelancer Professional</h4>
+                                        <p>UI/UX designer</p>
+                                    </div>
+                                    <div className="worked">
+                                        <h4>Netart Design & Development Agency</h4>
+                                        <p>Graphic, UI/UX designer & Illustrator</p>
+                                    </div>
+                                    <div className="worked">
+                                        <h4>Growth Ladders</h4>
+                                        <p>Graphic, UI/UX designer & Illustrator</p>
+                                    </div>
                                 </div>
                                 <div className="right">
-                                    <p>Transabel</p>
-                                    <p>Thotbox</p>
-                                    <p>Monkey Mind</p>
-                                    <p>Glastone</p>
+                                    <div className="worked">
+                                        <h4>Wedding Vows</h4>
+                                        <p>Graphic designer & Illustrator</p>
+                                    </div>
+                                    <div className="worked">
+                                        <h4>Nittany Creative Solutions</h4>
+                                        <p>Graphic designer & Illustrator</p>
+                                    </div>
+                                    <div className="worked">
+                                        <h4>Zero Gravity Photography (Intern)</h4>
+                                        <p>Graphic designer & Illustrator</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div className="worked-for">
-                            <h3>Companies worked for</h3>
+                            <h3>Basement</h3>
                             <div className="companies">
-                                <p>Wedding Vows</p>
-                                <p>Nittany Creative Solutions</p>
-                                <p>Zero Gravity Photography</p>
+                                <div className='left'>
+                                    <div className="worked">
+                                        <h4>Self-Tught Online</h4>
+                                        <p>Forever</p>
+                                    </div>
+                                    <div className="worked">
+                                        <h4>Image Creative Education</h4>
+                                        <p>C-Tech in graphic designer</p>
+                                    </div>
+                                </div>
+                                <div className="right">
+                                    <div className="worked">
+                                        <h4>Don Bosco</h4>
+                                        <p>Higher Sec. School</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </Layout>
+            {/* </Layout> */}
         </Div>
     )
 }

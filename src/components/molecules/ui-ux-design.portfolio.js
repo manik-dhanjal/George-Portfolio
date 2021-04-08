@@ -12,7 +12,7 @@ const Div = styled.div`
 width:100%;
 max-width:1400px;
 margin:0px auto;
-padding-bottom:40px;
+padding-top:40px;
 flex-grow:1;
 .center-align{
   display:flex;
@@ -24,8 +24,12 @@ flex-grow:1;
 @media screen and (max-width:1440px){
     max-width:900px;
     margin:0px auto;
+    padding-top:20px;
 }
 @media screen and (max-width:1024px){
+  .toogle-btns{
+    margin-top:20px;
+  }
 }
 `
 const UiUxDesign = () => {
@@ -42,7 +46,6 @@ const UiUxDesign = () => {
               settings: {
                 slidesToShow: 2,
                 slidesToScroll: 2,
-                rows: 2,
 
               }
             },

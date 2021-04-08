@@ -8,16 +8,13 @@ import Contact from "../organism/contact.hompage"
 import { Helmet } from "react-helmet"
 import logo from "../../assets/images/GD..png"
 import fav from "../../assets/images/favicon.ico"
+import Layout from '../layout/layout'
 const Div = styled.div`
-scroll-snap-type:y mandatory;
-overflow-y:scroll;
-height:100vh;
-scroll-behavior: smooth;
 `
 
 const Homepage = () => {
     return (
-        <Div>
+        <Layout>
                     <Helmet>
                         <meta charSet="utf-8" />
                         <title>George's Design</title>
@@ -33,7 +30,7 @@ const Homepage = () => {
              <Service/>
              <About/>
              <Contact/>
-        </Div>
+        </Layout>
     )
 }
 

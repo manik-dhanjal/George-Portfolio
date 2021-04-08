@@ -1,4 +1,4 @@
-import { Link } from 'gatsby'
+import {Link, animateScroll as scroll} from "react-scroll"
 import React,{useState} from 'react'
 import styled from "styled-components"
 
@@ -47,6 +47,7 @@ const Div = styled.div`
             color:white;
             font-family: Playfair Display;
             font-size:3em;
+            cursor:pointer;
         }
     }
 }
@@ -75,11 +76,11 @@ const NavBurger = ({menuColor=true,state=true}) => {
             {open?<div className="overlay"/>:null}
             <div className="menu">
                 <ul>
-                    <li><Link to="/#Intro" onClick={handleClick}>Intro</Link></li>
-                    <li><Link to="/#Portfolio" onClick={handleClick}>Portfolio</Link></li>
-                    <li><Link to="/#Services" onClick={handleClick}>Services</Link></li>
-                    <li><Link to="/#About" onClick={handleClick}>About</Link></li>
-                    <li><Link to="/#Contact" onClick={handleClick}>Contact</Link></li>
+                    <li><Link activeClass="active" onClick={handleClick} spy={true}to="intro"  smooth={true} duration={500} offset={-54}><span></span>Home</Link></li>
+                    <li><Link activeClass="active" onClick={handleClick} spy={true}to="portfolio"  smooth={true} duration={500} offset={-54}><span></span>Portfolio</Link></li>
+                    <li><Link  activeClass="active" onClick={handleClick} spy={true} to="services"  smooth={true} duration={500} offset={-54}><span></span>Services</Link></li>
+                    <li><Link activeClass="active" onClick={handleClick} spy={true} to="about" smooth={true} duration={500} offset={-54}><span></span>About</Link></li>
+                    <li><Link activeClass="active" onClick={handleClick} spy={true} to="contact" smooth={true} duration={500} offset={-54}><span></span>Contact</Link></li>
                 </ul>
             </div>
         </Div>

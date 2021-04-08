@@ -4,50 +4,34 @@ import Layout from '../layout/layout'
 import ContactForm from '../molecules/contact-form.contact'
 import useWindowDimensions from "../../hooks/window-size"
 const Div = styled.div`
-scroll-snap-align:start;
-position:relative;
-height:100vh;
-overflow:hidden;
-background:linear-gradient(
-    to right, 
-    #0051FF,
-    #0051FF 50%,
-    #FFFFFF 50%,
-    #FFFFFF 50%,
-    #FFFFFF 50%
-  );
-  main{
-      height:calc( 100vh - 54px );
-  }
+
 .contact-section{
-    padding:0 50px;
     display:flex;
-    height:100%;
-    max-width:1600px;
+    min-height:calc( 100vh - 50px );
     margin:0 auto;
     &>div{
         width:50%;
     }
     .contact-form{
-        padding-left:50px;
+        padding:50px 120px 50px 50px;
         display:flex;
         justify-content:center;
         align-items:center;
     }
     .address{
+        background:#0051FF;
         color:white;
         display:flex;
         justify-content:center;
         flex-direction:column;
-        height:100%;
         padding-right:50px;
+        padding:50px 50px 50px 120px;
         p{
             max-width:600px;
             font-size:18px;
         }
         .contact-details{
             margin-top:40px;
-            padding-bottom:50px;
             .detail{
                 display:flex;
                 flex-direction:column;
@@ -96,26 +80,25 @@ background:linear-gradient(
     } 
 }
 @media screen and (max-width:1024px){
-    background:linear-gradient(
-        to top, 
-        #0051FF,
-        #0051FF 50%,
-        #FFFFFF 50%,
-        #FFFFFF 50%,
-        #FFFFFF 100%
-      );
+
       .contact-section{
           flex-direction:column-reverse;
           .contact-form{
             width:100%;
-            padding:0px;
-            height:50%;
+            padding:50px 10px;
+            flex:1;
         }
+       
         .address{
             width:100%;
             padding:0px;
-            height:50%;
+            min-height:max-content;
+            height:40%;
+            padding:50px 30px;
             text-align:center;
+            p{
+                margin:5px auto;
+            }
             .contact-details{
                 padding-bottom:0px;
             }
@@ -127,25 +110,24 @@ background:linear-gradient(
 const Contact = () => {
 
     return (
-        <Div id="Contact">
-            <Layout logoColor={useWindowDimensions()<=1024} currentMenu="Contact" >
+        <Div id="contact">
                 <section className="contact-section">
                     <div className="address">
                         <h2>Address</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                        <p>Discover a new side to your company with a dedicated & innovative Looking to rebrand or start from the scratch? Give us a call, our experienced branding team is here to guide you through the process.</p>
 
                         <div className='contact-details'>
                             <div className='detail'>
                                 <strong>Email</strong>
-                                <a href='#'>info@growthladders.in</a>
+                                <a href='mailto:george.p.chettupezha@gmail.com'>george.p.chettupezha@gmail.com</a>
                             </div>
                             <div className='detail'>
                                 <strong>Contact</strong>
-                                <a href='#'>813-389-5955</a>
+                                <a href='tel:+91 99404 34768'>+91 99404 34768</a>
                             </div>
                             <div className='detail'>
                                 <strong>Office</strong>
-                                <a href='#'>Chennai, India</a>
+                                <a href='https://goo.gl/maps/SzgXNvPWVCEJnU2i9' target="_blank">Chennai, India</a>
                             </div>
                         </div>
                     </div>
@@ -153,7 +135,6 @@ const Contact = () => {
                         <ContactForm/>
                     </div>
                 </section>
-            </Layout>
         </Div>
     )
 }

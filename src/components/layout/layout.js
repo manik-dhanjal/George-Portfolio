@@ -3,24 +3,12 @@ import styled from "styled-components";
 import Footer from "./footer"
 import Header from "./header"
 import 'semantic-ui-css/semantic.min.css';
-
+if (typeof window !== "undefined") {
+    // eslint-disable-next-line global-require
+    require("smooth-scroll")('a[href*="#"]')
+  }
 const Div = styled.div`
-position: absolute;
-inset: 0px;
-clip: rect(0px, auto, auto, 0px);
-padding:0 50px;
-margin: 0 auto;
-main{
-    height:calc( 100% - 70px );
-}
-@media screen and (max-width:1280px){
-    main{
-        height:calc( 100% - 54px );
-    }
-}
-@media screen and (max-width:700px){
-    padding:0 30px;
-}
+
 `
 
 const Layout = ({children,logoColor,menuColor,currentMenu,sm}) => {

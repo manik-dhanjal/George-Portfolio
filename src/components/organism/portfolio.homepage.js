@@ -7,18 +7,11 @@ import UiUxDesign from "../molecules/ui-ux-design.portfolio"
 import Illustration from "../molecules/illustration.portfolio"
 
 const Div = styled.div`
-scroll-snap-align:start;
-position:relative;
-height:100vh;
 background:linear-gradient(107.56deg, #0051FF 0%, #0043D3 100%);
-overflow:hidden;
+margin-bottom:10px;
 .portfolio-section{
-    padding:0 50px;
-    display:flex;
-    flex-direction:column;
-}
-main,.portfolio-section{
-    height:calc( 100vh - 70px );
+    padding:50px;
+    min-height:100vh;
 }
 .head{
     padding-top:40px;
@@ -31,7 +24,7 @@ main,.portfolio-section{
         color:white;
     }
     p{
-        max-width:600px;
+        max-width:800px;
         color:white;
         text-align:center;
     }
@@ -54,7 +47,6 @@ main,.portfolio-section{
     }
 }
 .portfolio-tabs {
-    flex-grow:1;
 &>div{
     display:flex;
     flex-direction:column;
@@ -62,13 +54,16 @@ main,.portfolio-section{
 }
 }
 @media screen and (max-width:1440px){
-    main,.portfolio-section{
-        height:calc( 100vh - 54px );
+    .portfolio-section{
+        padding:30px 50px;
     }
     .head{
         padding-top:0px;
         margin-bottom:0px;
-        padding-bottom:0px;
+        padding-bottom:15px;
+        p{
+            max-width:650px;
+        }
     }
     .portfolio-tabs .menu{
         padding-top:15px;
@@ -79,6 +74,7 @@ main,.portfolio-section{
     }
 }
 @media screen and (max-width:1280px){
+
     .head{
         margin-top:10px;
         margin-bottom:0px;
@@ -90,10 +86,17 @@ main,.portfolio-section{
         }
     }
 }
+@media screen and (max-width:1024px){
+    .portfolio-section{
+        min-height:auto;
+    }
+}
 @media screen and (max-width:700px){
     .portfolio-section{
-        padding:0px;
+        padding:30px;
+        min-height:auto;
     }
+    
     .head{
         padding-top:0px;
         padding-bottom:20px;
@@ -126,19 +129,17 @@ const Portfolio = () => {
       ]
 
     return (
-        <Div id="Portfolio">
-            <Layout logoColor={false} menuColor={false} currentMenu="Portfolio">
+        <Div id="portfolio">
                 <section className="portfolio-section">
                     <div className="head">
                         <h2>Portfolio</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                        <p>It means that all my solutions begin with brand research and all of our work is catered to enhance and work with the brand at hand. It means we are always exploring the new, always innovating, with a focus on creative storytelling.</p>
                     </div>
                     <div className="portfolio-tabs">
                         <Tab menu={{ secondary: true, pointing: true }} panes={panes} />
                     </div>
 
                 </section>
-            </Layout>
         </Div>
     )
 }

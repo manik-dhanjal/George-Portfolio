@@ -18,8 +18,13 @@ display:flex;
 justify-content:center;
 flex-direction:column;
 @media screen and (max-width:1440px){
-    max-width:1000px;
-    margin:0px auto;
+  max-width:900px;
+  margin:0px auto;
+}
+@media screen and (max-width:1024px){
+.toogle-btns{
+  margin-top:20px;
+}
 }
 @media screen and (min-width:1080px){
   .toogle-btns{
@@ -57,15 +62,15 @@ const ServiceSlider = () => {
     const cardData = [
         {
             title:"UI/UX Design",
-            desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            desc:"We are here to understand your business, help develop and design a product that facilitates your business workflow and delivers an intuitively beautiful user experience that makes an impact.",
             img:service1
         },{
             title:"Branding Design",
-            desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            desc:"A great brand strategy acts as a guiding light for the brand and all future communication and walk you through the process of discovery, research and positioning to achieve the expected business results.",
             img:service2
         },{
             title:"Illustration",
-            desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            desc:"An illustration is a decoration, interpretation or visual explanation of a text, concept or process, designed for integration in print and digital published media.",
             img:service3
         }
 ]

@@ -24,7 +24,7 @@ padding:0 20px;
         }
     }
     .content{
-        padding:25px 20px;
+        padding:0px 20px;
         color:white;
         display:flex;
         flex-direction:column;
@@ -34,8 +34,9 @@ padding:0 20px;
         background: #0051FF;
         mix-blend-mode: normal;
         border: 1px solid #0051FF;
+        min-height:290px;
         p{
-            font-size:18px;
+            font-size:16px;
             margin-bottom:15px;
             margin-top:10px;
         }
@@ -50,6 +51,8 @@ padding:0 20px;
 }
 @media screen and (max-width:1440px){
     .sm-container .content{
+        padding:0px 15px;
+        min-height:200px;
         p{
             font-size:10px;
         }
@@ -61,6 +64,11 @@ padding:0 20px;
             padding:14px;
         }
     }
+}
+@media screen and (max-width:1440px){
+    .sm-container .content{
+        padding:0px 15px;
+        min-height:180px;
 }
 `
 const CardImgIn = ({img,title,desc,action}) => (

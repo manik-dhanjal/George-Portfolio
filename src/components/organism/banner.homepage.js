@@ -2,15 +2,16 @@ import React from 'react'
 import styled from "styled-components"
 import svg from "../../assets/images/banner-svg.svg"
 import Layout from '../layout/layout'
+import {Element} from "react-scroll"
 const Div =  styled.div`
-scroll-snap-align:start;
-overflow:hidden;
-position:relative;
-height:100vh;
+
 .banner{
     display:flex;
-    height:calc( 100vh - 54px );
-    padding:0 50px;
+    min-height:100vh;
+    padding:0 125px;
+    padding-top:54px;
+    justify-content:center;
+    margin-bottom:20px;
 }
 .banner-content{
     width:50%;
@@ -64,9 +65,11 @@ height:100vh;
 }
 @media screen and (max-width:1024px){
     .banner{
+        justify-content:center;
         flex-direction:column;
         padding-top:50px;
         padding-bottom:50px;
+        padding:50px;
         &>div{
             width:100%;
             height:70%;
@@ -77,12 +80,13 @@ height:100vh;
             align-items:center;
             justify-content:center;
             text-align:center;
+            margin-bottom:30px;
         }
     }
 }
 @media screen and (max-width:700px){
     .banner{
-        padding:30px 0;
+        padding:50px 30px;
         justify-content:center;
         .banner-content{
             height:min-content;
@@ -97,12 +101,12 @@ height:100vh;
 
 const Banner = () => {
     return (
-        <Div id="Intro">
-            <Layout currentMenu="Intro">
+        <Div id="intro">
+            {/* <Layout currentMenu="Intro"> */}
                 <div className="banner">
                     <div className="banner-content">
                         <h1>Will Make the Digital Beautiful.</h1>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+                        <p>I am a self-taught Graphic & UX/UI designer with 3+ years of experience in the creative industry. I have treaded across different technologies of the past and the present. My curiosity feeds my passion and puts them to use by various creative problems solving. I am open to exploring new possibilities and honing my skills to enhance my workflow in the field of user interface and user experience design</p>
                     </div>
                     <div className="banner-svg">
                         <div className="img-cont">
@@ -110,7 +114,7 @@ const Banner = () => {
                         </div>
                     </div>
                 </div>
-            </Layout>
+            {/* </Layout> */}
         </Div>
     )
 }
