@@ -7,6 +7,11 @@ import monkeyMind from "../../assets/images/monkey-mind.brand.png"
 import glastone from "../../assets/images/glastone.brand.png"
 import ModalPortfolio from '../molecules/modal.portfolio'
 import ToogleBtn from '../atom/toogle-btn';
+import b1 from "../../assets/images/branding1.jpg"
+import b2 from "../../assets/images/branding2.jpg"
+import b3 from "../../assets/images/branding3.jpg"
+import b4 from "../../assets/images/branding4.jpg"
+import b0 from "../../assets/images/branding0.jpg"
 
 const Div = styled.div`
 max-width:1400px;
@@ -63,25 +68,30 @@ const BrandDesign = () => {
     }
     const cardData = [
         {
-            img:glastone,
-            title:"Glastone",
-            subTitle:"Logo Design",
-            action:handleModel
+            img:b0,
+            title:"Wedding Vows",
+            subTitle:"November 2019",
+            link:"https://www.magzter.com/IN/GNT-Media-Private-Limited/Wedding-Vows/Bridal/384861"
         },{
-            img:monkeyMind,
-            title:"Monkey Mind",
-            subTitle:"User Interface & user Experience",
-            action:handleModel
+            img:b1,
+            title:"Wedding Vows",
+            subTitle:"December 2019",
+            link:"https://www.magzter.com/IN/GNT-Media-Private-Limited/Wedding-Vows/Bridal/392682"
         },{
-            img:transabel,
-            title:"Transabel",
-            subTitle:"User Interface & user Experience",
-            action:handleModel
+            img:b2,
+            title:"Wedding Vows",
+            subTitle:"January 2020",
+            link:"https://www.magzter.com/IN/GNT-Media-Private-Limited/Wedding-Vows/Bridal/403500"
         },{
-            img:transabel,
-            title:"Transabel",
-            subTitle:"User Interface & user Experience",
-            action:handleModel
+            img:b3,
+            title:"Wedding Vows",
+            subTitle:"February 2020",
+            link:"https://www.magzter.com/IN/GNT-Media-Private-Limited/Wedding-Vows/Bridal/418497"
+        },{
+            img:b4,
+            title:"Wedding Vows",
+            subTitle:"March 2020",
+            link:"https://www.magzter.com/IN/GNT-Media-Private-Limited/Wedding-Vows/Bridal/435959"
         },
     ]
       const [open,setOpen]=useState(false);

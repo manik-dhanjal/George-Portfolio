@@ -107,12 +107,12 @@ const ContactForm = () => {
             <form onSubmit={handleSubmit} data-netlify="true" name="ContactUs">
                 <input type="hidden" name="form-name" value="ContactUs" />
                 <div className="inline-boxes">
-                <Input placeholder="First Name" value={contactData.firstName} name="firstName" type="text" onChange={handleChange}/>
-                <Input placeholder="Last Name" value={contactData.lastName} name="lastName" onChange={handleChange}/>
+                <Input placeholder="First Name" value={contactData.firstName} name="firstName" type="text" onChange={handleChange} required={true}/>
+                <Input placeholder="Last Name" value={contactData.lastName} name="lastName" onChange={handleChange}required={true}/>
                 </div>
                 <div className="inline-boxes">
-                <PhoneInput country={'in'}  value={contactData.phone} onChange={handleChange} />
-                <Input placeholder="Email Address" value={contactData.email} name="email" type="email" onChange={handleChange}/>
+                <PhoneInput country={'in'}  value={contactData.phone} onChange={handleChange} inputProps={{required: true}}/>
+                <Input placeholder="Email Address" value={contactData.email} name="email" type="email" onChange={handleChange} required={true}/>
                 </div>
                 <div className="inline-boxes">
                 <Input placeholder="Company Name" value={contactData.companyName} name="companyName" type="text" onChange={handleChange}/>

@@ -34,11 +34,11 @@ padding:0 20px;
         background: #0051FF;
         mix-blend-mode: normal;
         border: 1px solid #0051FF;
-        min-height:290px;
+        min-height:300px;
         p{
-            font-size:16px;
             margin-bottom:15px;
             margin-top:10px;
+            font-size:0.8em;
         }
         h3{
             margin-bottom:5px;
@@ -53,9 +53,6 @@ padding:0 20px;
     .sm-container .content{
         padding:0px 15px;
         min-height:200px;
-        p{
-            font-size:10px;
-        }
         h3{
             margin-bottom:5px;
         }

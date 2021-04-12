@@ -18,8 +18,12 @@ padding:0px 20px;
     border:1px solid #FFFFFF30;
     .img-cont{
         width:100%;
+        height:300px;
         img{
             width:100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
         }
     }
     .content{
@@ -43,9 +47,13 @@ padding:0px 20px;
         }
     }
 }
-@media screen and (max-width:1441px){
+@media screen and (max-width:1440px){
+       .sm-container .img-cont{
+        height:210px;
+    }
     .sm-container .content{
         padding:25px 20px;
+        
         p{
             font-size:10px;
             margin-bottom:20px;
@@ -76,8 +84,7 @@ padding:0px 20px;
     }
 }
 `
-const CardImgIn = ({img,title,subTitle,action}) => {
-    console.log(action)
+const CardImgIn = ({img,title,subTitle,link}) => {
     return(
         <Div>
         <div className="sm-container">
@@ -87,7 +94,8 @@ const CardImgIn = ({img,title,subTitle,action}) => {
             <div className="content">
                 <h3>{title}</h3>
                 <p>{subTitle}</p>
-                <Button type="transparent" action={action}>Explore Case Study</Button>
+                <Button type="transparent" href={link}>View Magazine</Button>
+
             </div>
         </div>
     </Div>

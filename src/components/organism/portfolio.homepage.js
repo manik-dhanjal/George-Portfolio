@@ -8,7 +8,6 @@ import Illustration from "../molecules/illustration.portfolio"
 
 const Div = styled.div`
 background:linear-gradient(107.56deg, #0051FF 0%, #0043D3 100%);
-margin-bottom:10px;
 .portfolio-section{
     padding:50px;
     min-height:100vh;

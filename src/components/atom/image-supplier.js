@@ -7,7 +7,10 @@ const ImageSupplier = () => {
   // fluid(maxWidth: 300, quality: 100) {
   const { allFile } = useStaticQuery(graphql`
   {
-    allFile(filter: {relativeDirectory: {eq: "illustrations"}}) {
+    allFile(
+      filter: {relativeDirectory: {eq: "illustrations"}}
+      sort: {fields: name}
+    ) {
       edges {
         node {
           childImageSharp {

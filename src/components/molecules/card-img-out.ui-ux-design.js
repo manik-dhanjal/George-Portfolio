@@ -38,6 +38,7 @@ padding:0 20px;
             font-size:0.8em;
             color:white;
             font-family:Poppins;
+            margin-bottom:20px;
         }
     }
 }
@@ -53,8 +54,8 @@ const CardImgOut = ({img,title,link,desc,action}) => {
                 <div className='content'>
                     <h3>{title}</h3>
                     <p>{desc}</p>
-                    <Button action={action} >Explore Case Study</Button>
-                    <Button href={link} type='transparent'>Live Site</Button>
+                    {/* <Button action={action} >Explore Case Study</Button> */}
+                    <Button href={link} type='transparent' target="_blank">Live Site</Button>
                 </div>
                 
             </div>

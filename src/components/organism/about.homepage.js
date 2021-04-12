@@ -5,16 +5,14 @@ import george from "../../assets/images/Profile Photo.png"
 
 const Div = styled.div`
 .about-section{
-    padding:30px 130px;
+    padding:0px 130px;
     display:flex;
     justify-content:center;
-    align-items:center;
+    align-items:stretch;
     min-height: calc( 100vh - 54px );
     width:100%;
     margin:0 auto;
-    margin-bottom:20px;
     .george-img{
-        height: 100%;
         width:40%;
         padding-right:30px;
         .img-cont{
@@ -29,29 +27,41 @@ const Div = styled.div`
     }
     .content{
         padding-left:50px;
+        padding-top:30px;
         width:60%;
         flex:1;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
         .content-about,.worked-in,.worked-for{
             display:flex;
             margin-bottom:40px;
             h2,h3{
                 margin:0;
                 margin-right:30px;
-                min-width:180px;
+                min-width:100px;
             }
+        }
+        h2{
+            font-size:32px;
+        }
+        h3{
+            font-size:24px;
         }
         h2,h3,h4{
             color:#0051FF;
         }
         p{
-            font-size:18px;
             margin-bottom:5px;
         }
         .worked{
             padding-bottom:10px;
+            p{
+                font-size:0.8em;
+            }
             h4{
                 padding-bottom:3px;
-                font-size:18px;
+                font-size:16px;
                 margin:0;
                 font-family:poppins;
             }
@@ -91,7 +101,7 @@ const Div = styled.div`
                 h2,h3{
                     margin:0;
                     margin-right:30px;
-                    min-width:150px;
+                    min-width:100px;
                 }
             }
             .worked{

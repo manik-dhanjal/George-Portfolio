@@ -1,6 +1,5 @@
 import React,{useState} from 'react'
 import styled from "styled-components";
-import { Menu} from 'semantic-ui-react'
 import logo from "../../assets/images/GD..png"
 import whiteLogo from "../../assets/images/GD. white.png"
 import NavBurger from "./menu"
@@ -128,7 +127,7 @@ const Header = ({logoColor=true,menuColor=true,currentMenu="Intro",sm=false}) =>
                  <ul className="menu lg">
                     <li><Link activeClass="active" spy={true}to="intro"  smooth={true} duration={500} offset={-54}><span></span>Home</Link></li>
                     <li><Link activeClass="active" spy={true}to="portfolio"  smooth={true} duration={500} offset={-54}><span></span>Portfolio</Link></li>
-                    <li><Link  activeClass="active"spy={true} to="services"  smooth={true} duration={500} offset={-54}><span></span>Services</Link></li>
+                    <li><Link  activeClass="active"spy={true} to="services"  smooth={true} duration={500} offset={-54}><span></span>What I Do</Link></li>
                     <li><Link activeClass="active"spy={true} to="about" smooth={true} duration={500} offset={-54}><span></span>About</Link></li>
                     <li><Link activeClass="active"spy={true} to="contact" smooth={true} duration={500} offset={-54}><span></span>Contact</Link></li>
                  </ul>

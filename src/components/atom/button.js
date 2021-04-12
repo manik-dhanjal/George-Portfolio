@@ -32,10 +32,10 @@ button:hover,a:hover{
 }
 `
 
-const Button = ({type,action,children,href}) => {
+const Button = ({type,action,children,href},props) => {
     return (
         <Div type={type}>
-            {href?<a href={href}>{children}</a>:
+            {href?<a href={href} target="_blank" >{children}</a>:
             <button onClick={action}>{children}</button>}
         </Div>
     )

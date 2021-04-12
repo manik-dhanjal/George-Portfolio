@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Layout from '../layout/layout'
 import ServiceSlider from "../molecules/service-slider.service"
 const Div = styled.div`
+background:#f3f3f3;
 .service-section{
     padding:50px;
     display: flex;
@@ -19,7 +20,6 @@ const Div = styled.div`
         text-align:center;
         max-width:600px;
         margin:0 auto;
-        font-size:18px;
     }
 }
 .cards-container{
@@ -40,7 +40,6 @@ const Div = styled.div`
             text-align:center;
             max-width:600px;
             margin:0 auto;
-            font-size:0.85em;
         }
     }
 }

@@ -17,6 +17,7 @@ const Div = styled.div`
         display:flex;
         justify-content:center;
         align-items:center;
+        background:#f3f3f3;
     }
     .address{
         background:#0051FF;
@@ -28,7 +29,6 @@ const Div = styled.div`
         padding:50px 50px 50px 120px;
         p{
             max-width:600px;
-            font-size:18px;
         }
         .contact-details{
             margin-top:40px;
@@ -61,8 +61,7 @@ const Div = styled.div`
         .address{
             padding-right:30px;
             p{
-                max-width:400px;
-                font-size:0.9em!important;
+                max-width:350px;
             }
             .contact-details .detail{
                 margin-bottom:15px;
@@ -82,7 +81,7 @@ const Div = styled.div`
 @media screen and (max-width:1024px){
 
       .contact-section{
-          flex-direction:column-reverse;
+          flex-direction:column;
           .contact-form{
             width:100%;
             padding:50px 10px;
@@ -114,7 +113,7 @@ const Contact = () => {
                 <section className="contact-section">
                     <div className="address">
                         <h2>Address</h2>
-                        <p>Discover a new side to your company with a dedicated & innovative Looking to rebrand or start from the scratch? Give us a call, our experienced branding team is here to guide you through the process.</p>
+                        <p>Discover a new side to your company with a dedicated & innovative Looking to rebrand or start from the scratch?<br/> Give us a call, our experienced branding team is here to guide you through the process.</p>
 
                         <div className='contact-details'>
                             <div className='detail'>

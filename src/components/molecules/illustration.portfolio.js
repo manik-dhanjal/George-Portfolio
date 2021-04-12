@@ -18,7 +18,6 @@ margin:0px auto!important;
     }
     margin:20px;
 .illustration-img-cont{
-    height:40vh;
     padding:0 5px;
 
     img{
@@ -28,7 +27,6 @@ margin:0px auto!important;
     }
 }
 .illustration-img-cont{
-    height:40vh;
 }
 @media screen and (max-width:1440px){
     max-width:900px;
