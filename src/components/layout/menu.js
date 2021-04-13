@@ -1,6 +1,6 @@
-import {Link} from "react-scroll"
 import React,{useState} from 'react'
 import styled from "styled-components"
+import {Link} from "react-scroll"
 
 const Div = styled.div`
 .burger-menu{
