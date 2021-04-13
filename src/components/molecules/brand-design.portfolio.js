@@ -2,9 +2,6 @@ import React,{useState,useRef} from 'react'
 import styled from "styled-components"
 import Slider from "react-slick";
 import CardImgIn from "./card-img-in.brand-design"
-import transabel from "../../assets/images/transabel.brand.png"
-import monkeyMind from "../../assets/images/monkey-mind.brand.png"
-import glastone from "../../assets/images/glastone.brand.png"
 import ModalPortfolio from '../molecules/modal.portfolio'
 import ToogleBtn from '../atom/toogle-btn';
 import b1 from "../../assets/images/branding1.jpg"
@@ -62,10 +59,7 @@ const BrandDesign = () => {
             }
           ]
       };
-      const handleModel = () =>{
-        console.log("nn")
-        setOpen(true)
-    }
+
     const cardData = [
         {
             img:b0,

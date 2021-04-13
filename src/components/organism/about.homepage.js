@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from "styled-components"
-import Layout from '../layout/layout'
 import george from "../../assets/images/Profile Photo.png"
 
 const Div = styled.div`

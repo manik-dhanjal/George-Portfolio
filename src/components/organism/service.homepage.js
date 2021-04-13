@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from "styled-components"
-import Layout from '../layout/layout'
 import ServiceSlider from "../molecules/service-slider.service"
 const Div = styled.div`
 background:#f3f3f3;

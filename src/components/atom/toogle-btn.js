@@ -28,7 +28,7 @@ button:hover{
     transform:scale(1.2);
 }
 .drag-text{
-    color:${({color})=>color=="blue"?"#0051FF":"white"};
+    color:${({color})=>color==="blue"?"#0051FF":"white"};
     font-size:1.5em;
 }
 @media screen and ( max-width:1280px){
@@ -45,11 +45,11 @@ const ToogleBtn = ({next,prev,color="white"}) => {
     return (
         <Div color={color} className="toogle-btns">
                 <button className="button" onClick={prev}>
-                    <img src={color=="blue"?prevArrB:prevArr} alt="Previous Arrow"/>
+                    <img src={color==="blue"?prevArrB:prevArr} alt="Previous Arrow"/>
                 </button>
                 <span className="drag-text">Drag left using mouse</span>
                 <button className="button" onClick={next}>
-                    <img src={color=="blue"?nextArrB:nextArr} alt="next Arrow"/>
+                    <img src={color==="blue"?nextArrB:nextArr} alt="next Arrow"/>
                 </button>
         </Div>
     )

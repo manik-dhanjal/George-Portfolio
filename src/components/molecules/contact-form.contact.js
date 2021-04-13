@@ -3,7 +3,6 @@ import styled from "styled-components"
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
 import Input from '../atom/input'
-import Button from '../atom/button'
 
 
 const Div = styled.div`

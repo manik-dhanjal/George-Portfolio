@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
 import svg from "../../assets/images/banner-svg.svg"
-import Layout from '../layout/layout'
-import {Element} from "react-scroll"
 const Div =  styled.div`
 
 .banner{

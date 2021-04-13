@@ -1,11 +1,10 @@
-import React,{useState,useRef} from 'react'
+import React,{useRef} from 'react'
 import styled from "styled-components"
 import Slider from "react-slick";
 import CardImgIn from "../molecules/card-img-in.service"
 import service1 from "../../assets/images/service1.svg"
 import service2 from "../../assets/images/service2.svg"
 import service3 from "../../assets/images/service3.svg"
-import ModalPortfolio from '../molecules/modal.portfolio'
 import ToogleBtn from '../atom/toogle-btn';
 
 const Div = styled.div`

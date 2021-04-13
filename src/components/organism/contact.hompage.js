@@ -1,8 +1,6 @@
-import React,{useState,useEffect} from 'react'
+import React from 'react'
 import styled from "styled-components"
-import Layout from '../layout/layout'
 import ContactForm from '../molecules/contact-form.contact'
-import useWindowDimensions from "../../hooks/window-size"
 const Div = styled.div`
 
 .contact-section{
@@ -126,7 +124,7 @@ const Contact = () => {
                             </div>
                             <div className='detail'>
                                 <strong>Office</strong>
-                                <a href='https://goo.gl/maps/SzgXNvPWVCEJnU2i9' target="_blank">Chennai, India</a>
+                                <a href='https://goo.gl/maps/SzgXNvPWVCEJnU2i9' target="_blank" rel="noreferrer">Chennai, India</a>
                             </div>
                         </div>
                     </div>

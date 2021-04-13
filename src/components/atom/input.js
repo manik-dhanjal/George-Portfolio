@@ -35,7 +35,7 @@ const Input = (props) => {
     console.log(props)
     return (
         <Div>
-            {props.type=="textarea"?
+            {props.type==="textarea"?
             <textarea {...props}>{props.value}</textarea>:
             <input {...props} type={props.type} value={props.value}/>}
         </Div>

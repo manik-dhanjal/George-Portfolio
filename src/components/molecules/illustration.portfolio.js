@@ -1,7 +1,6 @@
-import React,{useRef,useEffect} from 'react'
+import React,{useRef} from 'react'
 import styled from "styled-components"
 import Slider from "react-slick";
-import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import ImageSupplier from "../atom/image-supplier"
 

@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React from 'react'
 import styled from "styled-components";
 import logo from "../../assets/images/GD..png"
 import whiteLogo from "../../assets/images/GD. white.png"
@@ -114,15 +114,13 @@ nav{
 
 const Header = ({logoColor=true,menuColor=true,currentMenu="Intro",sm=false}) => {
 
-    const handleClick = (name) =>{
-        window.location = "/#"+name;
-    }
+
     return (
         <HeaderS menuColor={menuColor} sm={sm}>
 
              <nav>
                  <div className="logo-cont">
-                     <img src={logoColor?logo:whiteLogo} alt="GD." onClick={()=>{console.log(scroll.scrollToTop);scroll.scrollToTop()}}/>
+                     <img src={logoColor?logo:whiteLogo} alt="GD." onClick={()=>{scroll.scrollToTop()}}/>
                  </div>
                  <ul className="menu lg">
                     <li><Link activeClass="active" spy={true}to="intro"  smooth={true} duration={500} offset={-54}><span></span>Home</Link></li>

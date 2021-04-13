@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from "styled-components"
-import Layout from '../layout/layout'
 import { Tab } from 'semantic-ui-react'
 import BrandDesign from "../molecules/brand-design.portfolio"
 import UiUxDesign from "../molecules/ui-ux-design.portfolio"

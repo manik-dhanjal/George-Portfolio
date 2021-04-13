@@ -1,10 +1,8 @@
 import React from 'react'
 import { Button, Icon, Image, Modal } from 'semantic-ui-react'
-import styled from "styled-components"
 
-const Div = styled.div`
 
-`
+
 
 const ModalPortfolio = ({open,setOpen}) => {
     return (
