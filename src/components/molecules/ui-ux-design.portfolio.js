@@ -70,7 +70,7 @@ const UiUxDesign = () => {
         {
             img:chaayos,
             title:"Chaayos Bazaar",
-            desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            desc:"a Chai adda to order chai online with 1200 personalised chai options",
             link:"https://bazaar.chaayos.com/",
             action:handleModel
         },{

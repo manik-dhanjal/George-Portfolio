@@ -53,7 +53,7 @@ const CardImgOut = ({img,title,link,desc,action}) => {
                 </div>
                 <div className='content'>
                     <h3>{title}</h3>
-                    <p>{desc}</p>
+                    {/* <p>{desc}</p> */}
                     {/* <Button action={action} >Explore Case Study</Button> */}
                     <Button href={link} type='transparent' target="_blank">Live Site</Button>
                 </div>
